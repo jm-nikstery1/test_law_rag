@@ -1,0 +1,38 @@
+[project]
+name = "law_qa_rag-version"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "datasets>=4.0.0",
+    "langchain-community>=0.3.29",
+    "neo4j>=5.28.2",
+    "ollama>=0.5.3",
+    "pandas>=2.3.2",
+    "pip>=25.2",
+    "python-docx>=1.2.0",
+    "qdrant-client>=1.15.1",
+    "ragas>=0.3.2",
+    "sentence-transformers>=5.1.0",
+    "setuptools>=80.9.0",
+    "torch==2.6.0",
+    "tqdm>=4.67.1",
+    "transformers>=4.56.0",
+]
+
+[tool.uv.sources]
+torch = [
+{ index = "pytorch-cu124" },
+]
+torchaudio = [
+{ index = "pytorch-cu124" },
+]
+torchvision = [
+{ index = "pytorch-cu124" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
