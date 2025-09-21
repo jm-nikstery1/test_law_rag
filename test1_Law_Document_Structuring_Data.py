@@ -186,10 +186,10 @@ class LawKnowledgeGraph:
             query = (
                 f'CREATE (c:ProvisionChunk {{'
                 f'id: "{chunk_id}", '
-                f'text: "{escaped_text}", '
-                f'chapter: "{meta["chapter"]}", '
-                f'article: "{meta["article_id"]} ({meta["article_title"]})", '
-                f'clause: "{meta["clause_num"]}"'
+                f'text: "{escaped_text}", '   # 내용
+                f'chapter: "{meta["chapter"]}", '  # 장
+                f'article: "{meta["article_id"]} ({meta["article_title"]})", '  # 조
+                f'clause: "{meta["clause_num"]}"'  # 항
                 f'}})'
             )
             self.cypher_queries.append(query)
